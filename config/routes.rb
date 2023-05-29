@@ -3,9 +3,14 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :cows, only: [:index, :show, :new, :create, :delete] do
-    resources :bookings, only: [:show, :new, :create, :edit, :update]
+    resources :bookings, only: [:create]
   end
-  get '/user/bookings', to: 'user#index'
+  
+  resources :bookings, only: [:update, :delete, :show] do
+    collection do
+      get :my_reservations
+    end
+  end
 end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
