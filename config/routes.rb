@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  resources :cows, only: [index, show, create, delete] do
-    resources :bookings, only: [index, show, create, edit, update]
+  resources :cows, only: [index, show, new, create, delete] do
+    resources :bookings, only: [index, show, new, create, edit, update]
   end
 end
 
