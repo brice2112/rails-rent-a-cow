@@ -6,6 +6,9 @@ ruby "3.1.2"
 # Devise gem for authentication
 gem "devise"
 
+# Cloudinary gem for images hosting
+gem "cloudinary"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"
 
