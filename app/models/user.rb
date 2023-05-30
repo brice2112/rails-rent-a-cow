@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :bookings
   has_many :cows
+  has_many :cows, through: :bookings
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :phone_number, format: { with: /0\d{9}/, message: "wrong phone number format" }
 end
