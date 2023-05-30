@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'open-uri'
 
 
 ######### USERS #########
@@ -77,14 +78,17 @@ User.create!(
 
 ######### COWS #########
 
-Cow.create!(
+cow = Cow.new(
   name: "Ginette",
   age: 4,
   race: "Charolaise",
   gender: "Female",
   location: "47.1231231, 179.99999999",
-  user_id: 2
+  user: User.first
 )
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow17_h9q13t.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
 
 Cow.create!(
   name: "Marguerite",
@@ -92,7 +96,7 @@ Cow.create!(
   race: "Bordelaise",
   gender: "Female",
   location: "44.12331, 2.9999",
-  user_id: 2
+  user: User.first
 )
 
 Cow.create!(
@@ -101,7 +105,7 @@ Cow.create!(
   race: "Prim'Holstein",
   gender: "Female",
   location: "42.1231, 42.99999",
-  user_id: 5
+  user: User.last
 )
 
 Cow.create!(
@@ -110,7 +114,7 @@ Cow.create!(
   race: "Limousine",
   gender: "Female",
   location: "54.31231, -5.9999459",
-  user_id: 4
+  user: User.first
 )
 
 Cow.create!(
@@ -119,7 +123,7 @@ Cow.create!(
   race: "Aubrac",
   gender: "Male",
   location: "23.1231, 1.945899",
-  user_id: 7
+  user: User.first
 )
 
 Cow.create!(
@@ -128,7 +132,7 @@ Cow.create!(
   race: "Armoricaine",
   gender: "Male",
   location: "47.1231231, 179.99999999",
-  user_id: 7
+  user: User.first
 )
 
 Cow.create!(
@@ -137,5 +141,5 @@ Cow.create!(
   race: "Charolaise",
   gender: "Male",
   location: "12.1231, -65.99999",
-  user_id: 7
+  user: User.first
 )
