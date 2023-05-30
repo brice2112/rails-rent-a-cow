@@ -1,0 +1,11 @@
+<h1>All the Cows</h1>
+
+<% @cows.each do |cow| %>
+<ul>
+<li><%= link_to "#{cow.name}", cow_path(cow.id) %></li>
+</ul>
+<% end %>
+
+<%= link_to new_cow_path do %>
+    <i class="fa-solid fa-plus"></i> Add a new Cow
+  <% end %>
