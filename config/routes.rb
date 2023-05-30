@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-  resources :cows, only: [:index, :show, :new, :create, :delete] do
+  resources :cows, only: [:index, :show, :new, :create, :destroy] do
     resources :bookings, only: [:create]
   end
 
-  resources :bookings, only: [:update, :delete, :show] do
+  resources :bookings, only: [:update, :show] do
     collection do
       get :my_reservations
     end

@@ -1,9 +1,13 @@
 <h1>All the Cows</h1>
 
 <% @cows.each do |cow| %>
-<ul>
-<li><%= link_to "#{cow.name}", cow_path(cow.id) %></li>
-</ul>
+  <ul>
+    <li><%= link_to "#{cow.name}", cow_path(cow.id) %></li>
+    <li><%= link_to cow_path(cow.id), data: {turbo_method: :delete, turbo_confirm: "Delete #{cow.name}?"} do %>
+        <i class="fa-regular fa-trash-can"></i>
+      <% end %>
+    </li>
+  </ul>
 <% end %>
 
 <%= link_to new_cow_path do %>

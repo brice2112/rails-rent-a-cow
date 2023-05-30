@@ -2,9 +2,11 @@
 
 <% @bookings.each do |booking| %>
 <ul>
-<li>
-<%= booking.date %>
-</li>
+  <li>
+    <%= link_to "#{booking.date}", booking_path(booking.id) %>
+  </li>
+  <li>
+    <%= booking.validated %>
+  </li>
 </ul>
-
 <% end %>

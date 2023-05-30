@@ -1,0 +1,8 @@
+<h2>Your reservation with <%= @booking.cow.name %></h2>
+
+<p><%= @booking.date %></p>
+
+<%= simple_form_for @booking do |f| %>
+  <%= f.input :validated, as: :radio_buttons, collection: ['pending', 'accepted', 'rejected'] %>
+  <%= f.button :submit %>
+<% end %>
