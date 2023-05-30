@@ -10,6 +10,6 @@ Cow.create(
   name: "Ginette",
   age: 4,
   race: "Charolaise",
-  gender: "female",
+  gender: "Female",
   location: "47.1231231, 179.99999999"
 )
