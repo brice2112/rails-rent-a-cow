@@ -1,0 +1,10 @@
+<h1><%= @cow.name%></h1>
+
+<p><%= @cow.race %></p>
+<p><%= @cow.gender %></p>
+<p><%= @cow.age %></p>
+
+<%= simple_form_for @booking,url: cow_bookings_path(@cow.id), method: :post, remote: false do |f| %>
+  <%= f.input :date, as: :date %>
+  <%= f.button :submit %>
+<% end %>
