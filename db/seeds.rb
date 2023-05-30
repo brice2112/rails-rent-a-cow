@@ -73,10 +73,8 @@ User.create!(
   address: "7304 Coventry Cir North Richland Hills, Texas(TX), 76180"
 )
 
-
-
-
 ######### COWS #########
+
 
 cow = Cow.new(
   name: "Ginette",
@@ -90,56 +88,158 @@ file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/R
 cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
 cow.save
 
-Cow.create!(
+cow = Cow.new(
   name: "Marguerite",
   age: 2,
   race: "Bordelaise",
   gender: "Female",
   location: "44.12331, 2.9999",
-  user: User.first
+  user: User.find_by(email: "patrick-lecq@gmail.com")
 )
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow18_oeqyz6.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
 
-Cow.create!(
+cow = Cow.new(
   name: "la noiraude",
   age: 7,
   race: "Prim'Holstein",
   gender: "Female",
   location: "42.1231, 42.99999",
-  user: User.last
+  user: User.find_by(email: "jmtrick@gmail.com")
 )
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow20_tc3kxe.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
 
-Cow.create!(
+cow = Cow.new(
   name: "Bubulle",
   age: 1,
   race: "Limousine",
   gender: "Female",
   location: "54.31231, -5.9999459",
-  user: User.first
+  user: User.find_by(email: "jmtrick@gmail.com")
 )
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow10_dmn3lv.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
 
-Cow.create!(
+cow = Cow.new(
+  name: "Sandy The Princess",
+  age: 3,
+  race: "Ferrandaise",
+  gender: "Female",
+  location: "45.1231, -5.99999",
+  user: User.last
+)
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow12_rxhnbh.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save!
+
+cow = Cow.new(
   name: "Badass Boxer",
   age: 5,
   race: "Aubrac",
   gender: "Male",
   location: "23.1231, 1.945899",
-  user: User.first
+  user: User.last
 )
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow14_bfc3dl.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
 
-Cow.create!(
+cow = Cow.new(
   name: "Iron Bill",
   age: 4,
   race: "Armoricaine",
   gender: "Male",
   location: "47.1231231, 179.99999999",
-  user: User.first
+  user: User.last
 )
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454867/Rent%20A%20Cow/cow9_nlroql.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
 
-Cow.create!(
+cow = Cow.new(
   name: "Bully The Destroyer",
-  age: 4,
+  age: 8,
   race: "Charolaise",
   gender: "Male",
   location: "12.1231, -65.99999",
-  user: User.first
+  user: User.last
 )
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454867/Rent%20A%20Cow/cow8_tmhh8n.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
+
+cow = Cow.new(
+  name: "Yvonne",
+  age: 8,
+  race: "Prim'Holstein",
+  gender: "Female",
+  location: "44.1231, -1.9299",
+  user: User.find_by(email: "marcel-boursier@gmail.com")
+)
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow23_al8hbw.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
+
+cow = Cow.new(
+  name: "Tarine Le Pen",
+  age: 2,
+  race: "Tarine",
+  gender: "Female",
+  location: "1.1231, -65.99999",
+  user: User.find_by(email: "lagribgdu56@gmail.com")
+)
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454867/Rent%20A%20Cow/cow7_t0wp9y.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
+
+cow = Cow.new(
+  name: "Pars à Veau l'Eau",
+  age: 1,
+  race: "Limousine",
+  gender: "Male",
+  location: "1.1231, -65.99999",
+  user: User.find_by(email: "momoguiguich@gmail.com")
+)
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow21_bm0fyu.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
+
+cow = Cow.new(
+  name: "Ginger Beauty",
+  age: 5,
+  race: "Rouge flamande",
+  gender: "Female",
+  location: "45.1231, -5.94599",
+  user: User.last
+)
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454867/Rent%20A%20Cow/cow6_mutbm6.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
+
+cow = Cow.new(
+  name: "Cow-Cow Chanel",
+  age: 5,
+  race: "Parthenaise",
+  gender: "Female",
+  location: "57.1231, 11.94599",
+  user: User.find_by(email: "momoguiguich@gmail.com")
+)
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow15_cq7rjt.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
+
+cow = Cow.new(
+  name: "Ajax",
+  age: 2,
+  race: "Salers",
+  gender: "Male",
+  location: "24.1231, -8.94599",
+  user: User.find_by(email: "momoguiguich@gmail.com")
+)
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow19_jkfgvg.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
