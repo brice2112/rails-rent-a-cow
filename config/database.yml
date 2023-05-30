@@ -82,5 +82,4 @@ test:
 production:
   <<: *default
   database: RENT_A_COW_production
-  username: RENT_A_COW
-  password: <%= ENV["RENT_A_COW_DATABASE_PASSWORD"] %>
+
