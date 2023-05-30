@@ -1,0 +1,13 @@
+<div class="flex-container">
+  <div class="row">
+    <% @cows.each do |cow| %>
+    <div class="col-3">
+      <div class="card-cow">
+        <%= image_tag "popcorn.png" %>
+        <div class="card-cow-infos">
+          <h2>Vache name</h2>
+          <p>Tres belle vache <strong>relevant info</strong> only.</p>
+      </div>
+    </div>
+  </div>
+</div>
