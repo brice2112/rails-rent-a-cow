@@ -20,11 +20,11 @@ class CowsController < ApplicationController
       flash[:notice] = "Done!"
       redirect_to cow_path(@cow.id)
     else
-      render new, status: 422
+      render new, status: 422   #Don't have any error message in the browser ?
     end
   end
 
-  def delete
+  def destroy
     @cow.destroy
     redirect_to cows_path
   end
