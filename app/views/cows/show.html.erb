@@ -1,10 +1,20 @@
 <h1><%= @cow.name%></h1>
 
+<p>Race</p>
 <p><%= @cow.race %></p>
+<p>Gender</p>
 <p><%= @cow.gender %></p>
+<p>Age</p>
 <p><%= @cow.age %></p>
+<p>Propriétaire</p>
+<p><%= @cow.user.first_name %> <%= @cow.user.last_name %></p>
+<%= cl_image_tag(@cow.photo.key, width: 400, height: 300, crop: :fill) %>
 
-<%= simple_form_for @booking,url: cow_bookings_path(@cow.id), method: :post, remote: false do |f| %>
-  <%= f.input :date, as: :date %>
-  <%= f.button :submit %>
+
+
+<% if @cow.user != current_user %>
+  <%= simple_form_for @booking,url: cow_bookings_path(@cow.id), method: :post, remote: false do |f| %>
+    <%= f.input :date, as: :date %>
+    <%= f.button :submit %>
+  <% end %>
 <% end %>

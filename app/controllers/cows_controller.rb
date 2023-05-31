@@ -1,5 +1,6 @@
 class CowsController < ApplicationController
   before_action :set_cow, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @cows = Cow.all
@@ -7,6 +8,7 @@ class CowsController < ApplicationController
   end
 
   def show
+    # raise
     @booking = Booking.new
   end
 
@@ -18,7 +20,7 @@ class CowsController < ApplicationController
     @cow = Cow.new(cow_params)
     @cow.user = current_user
     if @cow.save!
-      flash[:notice] = "Done!"
+      #flash[:notice] = "Done!"
       redirect_to cow_path(@cow.id)
     else
       render new, status: 422   #Don't have any error message in the browser ?
@@ -30,6 +32,10 @@ class CowsController < ApplicationController
     redirect_to cows_path
   end
 
+  def my_cows
+    @cows = current_user.cows
+  end
+
   private
 
   def set_cow
@@ -37,7 +43,7 @@ class CowsController < ApplicationController
   end
 
   def cow_params
-    params.require(:cow).permit(:name, :race, :gender, :age, :location)
+    params.require(:cow).permit(:name, :race, :gender, :age, :location, :photo)
   end
 
 end

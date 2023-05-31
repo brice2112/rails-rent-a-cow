@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :cows, only: [:index, :show, :new, :create, :destroy] do
+    collection do
+      get :my_cows
+    end
     resources :bookings, only: [:create]
   end
 

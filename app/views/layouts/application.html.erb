@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CHANGEThisToYourRailsAppName</title>
+    <title>Rent A Cow</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,10 +11,13 @@
   </head>
 
   <body>
+  <%=render "shared/navbar"%>
+    <%=render "shared/banner"%>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%=render "shared/navbar"%>
     <%=render "shared/banner"%>
     <%= yield %>
+  <%= render "shared/flashes" %>
   </body>
 </html>

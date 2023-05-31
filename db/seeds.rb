@@ -9,6 +9,9 @@ require 'open-uri'
 
 
 ######### USERS #########
+User.destroy_all
+
+puts "Creating users..."
 
 User.create!(
   first_name: "Jean François",
@@ -75,6 +78,7 @@ User.create!(
 
 ######### COWS #########
 
+puts "Creating cows..."
 
 cow = Cow.new(
   name: "Ginette",
@@ -243,3 +247,5 @@ cow = Cow.new(
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow19_jkfgvg.jpg')
 cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
 cow.save
+
+puts "seed planted!"
