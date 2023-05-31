@@ -8,13 +8,23 @@
 <p><%= @cow.age %></p>
 <p>Propriétaire</p>
 <p><%= @cow.user.first_name %> <%= @cow.user.last_name %></p>
-<%= cl_image_tag(@cow.photo.key, width: 400, height: 300, crop: :fill) %>
-
-
+<% if @cow.photo.attached? %>
+  <%= cl_image_tag(@cow.photo.key, width: 400, height: 300, crop: :fill) %>
+<% end %>
 
 <% if @cow.user != current_user %>
   <%= simple_form_for @booking,url: cow_bookings_path(@cow.id), method: :post, remote: false do |f| %>
     <%= f.input :date, as: :date %>
     <%= f.button :submit %>
+  <% end %>
+<% end %>
+
+<% if @cow.user == current_user && @reservations != []%>
+  <% @reservations.each do |resa| %>
+    <ul>
+      <li>
+        <%= resa.date %>
+      </li>
+    </ul>
   <% end %>
 <% end %>
