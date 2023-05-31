@@ -7,8 +7,8 @@ class CowsController < ApplicationController
   end
 
   def show
-    # raise
     @booking = Booking.new
+    @reservations = Booking.where(cow: set_cow)
   end
 
   def new
@@ -19,7 +19,6 @@ class CowsController < ApplicationController
     @cow = Cow.new(cow_params)
     @cow.user = current_user
     if @cow.save!
-      #flash[:notice] = "Done!"
       redirect_to cow_path(@cow.id)
     else
       render new, status: 422   #Don't have any error message in the browser ?
