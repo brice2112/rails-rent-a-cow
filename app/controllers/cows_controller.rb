@@ -6,7 +6,7 @@ class CowsController < ApplicationController
   end
 
   def show
-    raise
+    # raise
     @booking = Booking.new
   end
 
@@ -37,7 +37,7 @@ class CowsController < ApplicationController
   end
 
   def cow_params
-    params.require(:cow).permit(:name, :race, :gender, :age, :location)
+    params.require(:cow).permit(:name, :race, :gender, :age, :location, :photo)
   end
 
 end

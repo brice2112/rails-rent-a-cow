@@ -1,9 +1,12 @@
 <h1><%= @cow.name%></h1>
 
+<p>Race</p>
 <p><%= @cow.race %></p>
+<p>Gender</p>
 <p><%= @cow.gender %></p>
+<p>Age</p>
 <p><%= @cow.age %></p>
-<%= cl_image_tag(@cow.photo, width: 400, height: 300, crop: :fill) %>
+<%= cl_image_tag(@cow.photo.key, width: 400, height: 300, crop: :fill) %>
 
 <%= simple_form_for @booking,url: cow_bookings_path(@cow.id), method: :post, remote: false do |f| %>
   <%= f.input :date, as: :date %>
