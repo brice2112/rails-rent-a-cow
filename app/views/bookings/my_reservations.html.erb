@@ -3,6 +3,9 @@
 <% @bookings.each do |booking| %>
 <ul>
   <li>
+    <%= link_to "#{booking.cow.name}", cow_path(booking.cow.id) %>
+  </li>
+  <li>
     <%= link_to "#{booking.date}", booking_path(booking.id) %>
   </li>
   <li>

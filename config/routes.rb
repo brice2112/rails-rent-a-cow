@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     collection do
       get :my_cows
     end
-    resources :bookings, only: [:create]
+    resources :bookings, only: [:index, :create] 
   end
 
   resources :bookings, only: [:update, :show] do
