@@ -9,6 +9,7 @@ require 'open-uri'
 
 
 ######### USERS #########
+User.destroy_all
 
 User.create!(
   first_name: "Jean François",
