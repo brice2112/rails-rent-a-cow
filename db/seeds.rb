@@ -7,11 +7,15 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'open-uri'
 
+User.destroy_all
+Cow.destroy_all
 
 ######### USERS #########
 User.destroy_all
 
 puts "Creating users..."
+
+
 
 User.create!(
   first_name: "Jean François",
