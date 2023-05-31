@@ -1,9 +1,10 @@
 .card-cows {
   overflow: hidden;
-  height: 120px;
+  height: 100px;
   background: rgb(251, 252, 251);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  align-items: center;
 
 }
 .flex-container {
@@ -14,10 +15,9 @@
 }
 
 .card-cows img {
-  height: 100%;
-  width: 120px;
+  height: 120px;
+  width: 20%;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 .card-cows h2 {
@@ -39,5 +39,5 @@
 
 .card-cows .card-cow-infos {
   padding: 16px;
-  align-self: flex-end;
+  align-items: center;
 }
