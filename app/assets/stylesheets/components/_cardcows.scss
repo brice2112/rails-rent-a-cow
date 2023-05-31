@@ -1,10 +1,13 @@
 .card-cows {
+
   overflow: hidden;
   height: 120px;
-  background: rgb(251, 252, 251);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-
+  border-radius: 8px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDnoypqQNiBI-RMFYARAnFUbOPqq9U4UaPWQ&usqp=CAU");
+  background-size: cover;
+  background-position: center;
 }
 .flex-container {
   display: flex;
@@ -21,20 +24,19 @@
 }
 
 .card-cows h2 {
-  font-size: 16px;
+  text-decoration-color: black;
+  font-size: 24px;
   font-weight: bold;
-  margin-top: 6px;
-
-
+  margin-top: 0px;
+  margin-left: 66px;
 }
 
 .card-cows p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 0px;
   margin-top: 12px;
-  margin-left: 6px;
+  margin-left: 66px;
 }
 
 .card-cows .card-cow-infos {

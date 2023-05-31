@@ -1,20 +1,24 @@
-<h1>All the Cows</h1>
+<h1>                        All the Cows</h1>
 
 <div class="flex-container">
   <% @cows.each do |cow| %>
     <div class="flex-item">
     <div class="card-cows">
-        <div class="card-cow-infos">
+
         <% if cow.photo.key %>
           <%= cl_image_tag(cow.photo.key, width: 100, height: 100, crop: :fill) %>
         <% end %>
+        <div class="flex-container">
+        <div class="card-cow-infos">
           <h2><%= link_to "#{cow.name}", cow_path(cow.id) %></h2>
+          <p><%= cow.race %></p>
           <p><%= cow.gender %></p>
           <% if cow.age == 1 %>
             <p><%= cow.age %> year old</p>
           <% else %>
             <p><%= cow.age %> years old</p>
           <% end %>
+        </div>
     </div>
   </div>
 </div>
