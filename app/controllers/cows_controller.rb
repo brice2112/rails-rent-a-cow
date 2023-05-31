@@ -6,6 +6,7 @@ class CowsController < ApplicationController
   end
 
   def show
+    raise
     @booking = Booking.new
   end
 
