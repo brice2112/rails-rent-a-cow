@@ -17,10 +17,9 @@
 }
 
 .card-cows img {
-  height: 100%;
-  width: 120px;
+  height: 120px;
+  width: 20%;
   object-fit: cover;
-  border-radius: 8px;
 }
 
 .card-cows h2 {
@@ -41,5 +40,5 @@
 
 .card-cows .card-cow-infos {
   padding: 16px;
-  align-self: flex-end;
+  align-items: center;
 }
