@@ -1,15 +1,14 @@
 <h1>All the Cows</h1>
 
-<% @cows.each do |cow| %>
-  <ul>
-    <li><%= link_to "#{cow.name}", cow_path(cow.id) %></li>
-    <li><%= link_to cow_path(cow.id), data: {turbo_method: :delete, turbo_confirm: "Delete #{cow.name}?"} do %>
-        <i class="fa-regular fa-trash-can"></i>
-      <% end %>
-    </li>
-  </ul>
-<% end %>
-
-<%= link_to new_cow_path do %>
-    <i class="fa-solid fa-plus"></i> Add a new Cow
+<div class="flex-container">
+  <% @cows.each do |cow| %>
+    <div class="flex-item">
+    <div class="card-cows">
+        <div class="card-cow-infos">
+        <%= image_tag(cloudinary_url("cloudinary://554131736232446:1Ios3vdlxRBl1s1nH8I97VS52Go@dw25hg2ws")) %>
+          <h2><%= link_to "#{cow.name}", cow_path(cow.id) %></h2>
+          <p>Tres belle vache <strong>relevant info</strong> only.</p>
+    </div>
+  </div>
+</div>
   <% end %>
