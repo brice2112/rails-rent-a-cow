@@ -8,5 +8,5 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :phone_number, format: { with: /0\d{9}/, message: "wrong phone number format" }
+  # validates :phone_number, format: { with: /0\d{9}/, message: "wrong phone number format" }
 end

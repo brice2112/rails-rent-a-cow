@@ -11,6 +11,7 @@ User.destroy_all
 Cow.destroy_all
 
 ######### USERS #########
+User.destroy_all
 
 puts "Creating users..."
 
