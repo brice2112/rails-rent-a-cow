@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "/", class: "navbar-brand" do %>
-      <%= image_tag "logo" %>
+      <%= image_tag "logo_vache" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,9 +18,9 @@
             Home
             </button>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My profil", "edit", class: "dropdown-item" %>
-              <%= link_to "See cows", "cows", class: "dropdown-item" %>
-              <%= link_to "Log out", "sign_out", class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "My profil", user_registration_path, class: "dropdown-item" %>
+              <%= link_to "See cows", cows_path, class: "dropdown-item" %>
+              <%= link_to "Log out",destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
         <%# else %>
