@@ -9,6 +9,7 @@ require 'open-uri'
 
 
 ######### USERS #########
+User.destroy_all
 
 puts "Creating users..."
 
