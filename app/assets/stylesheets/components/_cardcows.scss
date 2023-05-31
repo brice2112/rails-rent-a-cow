@@ -1,16 +1,14 @@
 .card-cows {
   overflow: hidden;
   height: 120px;
-  background: white;
+  background: rgb(251, 252, 251);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
 
 }
 .flex-container {
   display: flex;
   justify-content: center;
-  align-self: flex-end;
   align-self: center;
 
 }
@@ -25,7 +23,9 @@
 .card-cows h2 {
   font-size: 16px;
   font-weight: bold;
-  margin-left: 6px;
+  margin-top: 6px;
+
+
 }
 
 .card-cows p {
@@ -37,6 +37,7 @@
   margin-left: 6px;
 }
 
-.card-cows .card-cows-infos {
+.card-cows .card-cow-infos {
   padding: 16px;
+  align-self: flex-end;
 }
