@@ -16,25 +16,21 @@ class Cow < ApplicationRecord
     Abondance
     Bordelaise
     Brune
-    Froment du Léon
-    Jersiaise
-    Pie rouge des plaines
+    Pie\rouge\des\plaines
     Prim'Holstein
-    Rouge flamande
-    Blanc bleu
-    Blonde d'Aquitaine
+    Rouge\flamande
+    Blanc\bleu
+    Blonde\d'Aquitaine
     Charolaise
-    Gasconne des Pyrénées
     Limousine
     Parthenaise
-    Rouge des prés
+    Rouge\des\prés
     Saosnoise
-    Taureau de Camargue
     Armoricaine
     Aubrac
     Aure-et-saint-girons
     Béarnaise
-    Bleue du Nord
+    Bleue\du\Nord
     Ferrandaise
     Montbéliarde
     Nantaise
@@ -42,7 +38,5 @@ class Cow < ApplicationRecord
     Salers
     Tarine
   ), message: "wrong race"}
-
-
 
 end

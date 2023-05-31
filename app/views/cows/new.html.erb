@@ -1,8 +1,38 @@
-<%= simple_form_for @cow do |f| %>
-  <%= f.input :name %>
-  <%= f.input :race %>
-  <%= f.input :gender %>
-  <%= f.input :age %>
-  <%= f.input :location %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <%= simple_form_for @cow do |f| %>
+      <%= f.input :name %>
+      <%= f.input :race, collection:
+        [['0', "Abondance"],
+        ['1', "Bordelaise"],
+        ['2', "Brune"],
+        ['3', "Pie rouge des plaines"],
+        ['4', "Prim'Holstein"],
+        ['5', "Rouge flamande"],
+        ['6', "Blanc bleu"],
+        ['7', "Blonde d'Aquitaine"],
+        ['8', "Charolaise"],
+        ['9', "Limousine"],
+        ['10', "Parthenaise"],
+        ['11', "Rouge des prés"],
+        ['12', "Saosnoise"],
+        ['13', "Armoricaine"],
+        ['14', "Aubrac"],
+        ['15', "Aure-et-saint-girons"],
+        ['16', "Béarnaise"],
+        ['17', "Bleue du Nord"],
+        ['18', "Ferrandaise"],
+        ['19', "Montbéliarde"],
+        ['20', "Nantaise"],
+        ['21', "Normande"],
+        ['22', "Salers"],
+        ['23', "Tarine"]],
+       label_method: :second, value_method: :second%>
+      <%= f.input :gender, collection: [['0', "Male"], ['1', "Female"]], label_method: :second, value_method: :second %>
+      <%= f.input :age, as: :integer %>
+      <%= f.input :location %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
