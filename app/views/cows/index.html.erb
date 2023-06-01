@@ -1,6 +1,7 @@
 <h1>                        All the Cows</h1>
 
 <div class="flex-container">
+
   <% @cows.each do |cow| %>
     <div class="flex-item">
     <div class="card-cows">
@@ -10,6 +11,7 @@
         <% end %>
         <div class="flex-container">
         <div class="card-cow-infos">
+
           <h2><%= link_to "#{cow.name}", cow_path(cow.id) %></h2>
           <p><%= cow.race %></p>
           <p><%= cow.gender %></p>

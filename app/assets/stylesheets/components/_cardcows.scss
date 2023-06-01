@@ -5,7 +5,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   border-radius: 8px;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDnoypqQNiBI-RMFYARAnFUbOPqq9U4UaPWQ&usqp=CAU");
+  background-color: rgb(254, 254, 254);
   background-size: cover;
   background-position: center;
 }
@@ -17,28 +17,31 @@
 }
 
 .card-cows img {
-  height: 120px;
-  width: 20%;
+  height: 100%;
+  width: 120px;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .card-cows h2 {
-  text-decoration-color: black;
+  color: black;
   font-size: 24px;
   font-weight: bold;
-  margin-top: 0px;
-  margin-left: 66px;
+  margin-top: 12px;
+  margin-left: 24px;
 }
 
 .card-cows p {
   font-size: 18px;
   line-height: 1;
-  margin-bottom: 0px;
+  opacity: .7;
+  align-items: self-start;
+  margin-bottom: 0;
   margin-top: 12px;
-  margin-left: 66px;
+  margin-left: 6px;
 }
 
-.card-cows .card-cow-infos {
+.card-cows .card-cows-infos {
   padding: 16px;
-  align-items: center;
+  align-self: flex-end;
 }
