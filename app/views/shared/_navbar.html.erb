@@ -28,9 +28,9 @@
             Home
              </button>
              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My profil", user_registration_path, class: "dropdown-item" %>
+              <%= link_to "My profil", profile_path, class: "dropdown-item" %>
               <%= link_to "Rent a cow", cows_path, class: "dropdown-item" %>
-               <%=link_to "Log Out", destroy_user_session_path, class: "dropdown-item"%>
+              <%=link_to "Log Out", destroy_user_session_path, class: "dropdown-item"%>
             </div>
           <%else%>
             <%=link_to "Log In", new_user_session_path, class: "nav-link"%>
