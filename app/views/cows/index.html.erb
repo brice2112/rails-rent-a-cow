@@ -1,6 +1,7 @@
 <h1>All the Cows</h1>
 
-<div class="flex-container">
+<div class="row">
+  <div class="col-6">
 
   <% @cows.each do |cow| %>
     <div class="flex-item">
@@ -27,4 +28,10 @@
       </div>
     </div>
   <% end %>
+</div>
+       <div class="col-6">
+        <div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
