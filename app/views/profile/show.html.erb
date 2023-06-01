@@ -1,22 +1,46 @@
 <h1>My Profile</h1>
 
+<h2>My Infos</h2>
 <p><%= @user.first_name %></p>
 <p><%= @user.last_name %></p>
 <p><%= @user.phone_number %></p>
 <p><%= @user.address %></p>
 
+
+<h3>My Cows</h3>
 <% @cows.each do |cow| %>
-<ul>
-<li>
-<%= cow.name %>
-</li>
-</ul>
+  <ul>
+    <li>
+     <%= cow.name %>
+    </li>
+    <% cow.bookings.each do |booking| %>
+      <ul>
+        <li>
+          <%= booking.date %>
+        </li>
+      </ul>
+    <% end %>
+  </ul>
 <% end %>
 
+
+<h3>My Reservations</h3>
 <% @bookings.each do |resa| %>
-<ul>
-<li>
-<%= resa.date %>
-</li>
-</ul>
+  <ul>
+    <li>
+      <%= resa.date %>
+    </li>
+  </ul>
+<% end %>
+
+<h3>My Cows' Bookings</h3>
+<% @cows.each do |cow| %>
+  <% cow.bookings.each do |booking| %>
+    <ul>
+      <li>
+        <%= booking.date %>
+        <%= booking.cow.name %>
+      </li>
+    </ul>
+  <% end %>
 <% end %>

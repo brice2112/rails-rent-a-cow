@@ -7,6 +7,7 @@ class ProfileController < ApplicationController
     authorize @user
     authorize @cows
     authorize @bookings
+
   end
 
 end
