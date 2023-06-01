@@ -2,10 +2,8 @@
 
   overflow: hidden;
   height: 120px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
   display: flex;
-  border-radius: 8px;
-  background-color: rgb(254, 254, 254);
   background-size: cover;
   background-position: center;
 }
@@ -17,8 +15,6 @@
 }
 
 .card-cows img {
-  height: 100%;
-  width: 120px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -27,8 +23,6 @@
   color: black;
   font-size: 24px;
   font-weight: bold;
-  margin-top: 12px;
-  margin-left: 24px;
 }
 
 .card-cows p {
@@ -38,10 +32,24 @@
   align-items: self-start;
   margin-bottom: 0;
   margin-top: 12px;
-  margin-left: 6px;
 }
 
-.card-cows .card-cows-infos {
-  padding: 16px;
-  align-self: flex-end;
+.card-cows .card-cow-infos a {
+  text-decoration: none;
+  color: darkslategray
+}
+
+.card-cows .card-cow-infos .card-info-bold {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.card-cows .card-cow-infos .card-info-light {
+  font-size: 12px;
+}
+
+.card-cows .card-cow-infos p h2 {
+  padding: 2px;
+  margin: 2px;
 }
