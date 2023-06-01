@@ -3,6 +3,7 @@
 <div class="container mt-3 text-align-center">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
+      
       <h1> Which cow do you prefer ? </h1>
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -14,9 +15,11 @@
             <%= link_to "#{cow.name}", cow_path(cow.id) %>
             </div>
           <% end %>
+
         </div>
       </div>
 
     </div>
   </div>
 </div>
+<%# <div class="footer">

@@ -1,5 +1,4 @@
 .card-cows {
-
   overflow: hidden;
   height: 120px;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
@@ -8,15 +7,14 @@
   background-position: center;
 }
 .flex-container {
-  display: flex;
-  justify-content: center;
-  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
 }
 
 .card-cows img {
   object-fit: cover;
-  border-radius: 8px;
+  // border-radius: 8px;
 }
 
 .card-cows h2 {
@@ -26,7 +24,7 @@
 }
 
 .card-cows p {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1;
   opacity: .7;
   align-items: self-start;
@@ -36,20 +34,38 @@
 
 .card-cows .card-cow-infos a {
   text-decoration: none;
-  color: darkslategray
+  color: rgb(20, 100, 74);
+  margin: 8px;
 }
 
 .card-cows .card-cow-infos .card-info-bold {
   font-size: 16px;
   font-weight: 500;
+  margin: 8px;
 }
 
 
 .card-cows .card-cow-infos .card-info-light {
   font-size: 12px;
+  margin: 8px;
+// .card-cows .card-cow-infos p h2 {
+//   padding: 2px;
+//   margin: 2px;
 }
 
-.card-cows .card-cow-infos p h2 {
-  padding: 2px;
-  margin: 2px;
+.card-cows .card-price {
+  margin-top: 12px;
+  margin-right: 12px;
+  padding: 8px;
+  color: white;
+  background-color: rgb(20, 100, 74);
+  border-radius: 8px;
+  text-align: right;
+}
+
+.card-cows .card-rating {
+  font-weight: 600;
+  color: rgb(20, 100, 74);
+  text-align: right;
+  margin-right: 12px
 }

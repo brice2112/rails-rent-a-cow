@@ -1,30 +1,36 @@
-<h1><%= @cow.name%></h1>
+<div class="card">
+  <div class="row justify-content-center">
+      <h1 class="centered"><%= @cow.name%></h1>
+        <% if @cow.photo.attached? %>
+          <%= cl_image_tag(@cow.photo.key, width: 800, height: 600, crop: :fill) %>
+        <p class="centered">Propriétaire : <%= @cow.user.first_name %> <%= @cow.user.last_name %></p>
+        <% end %>
 
-<p>Race</p>
-<p><%= @cow.race %></p>
-<p>Gender</p>
-<p><%= @cow.gender %></p>
-<p>Age</p>
-<p><%= @cow.age %></p>
-<p>Propriétaire</p>
-<p><%= @cow.user.first_name %> <%= @cow.user.last_name %></p>
-<% if @cow.photo.attached? %>
-  <%= cl_image_tag(@cow.photo.key, width: 400, height: 300, crop: :fill) %>
-<% end %>
+        <p class="centered">Race</p>
+        <p class="centered"><%= @cow.race %></p>
+        <p class="centered">Gender</p>
+        <p class="centered"><%= @cow.gender %></p>
+        <p class="centered">Age</p>
+        <p class="centered"><%= @cow.age %></p>
+        <p class="centered">Propriétaire</p>
 
-<% if @cow.user != current_user %>
-  <%= simple_form_for @booking,url: cow_bookings_path(@cow.id), method: :post, remote: false do |f| %>
-    <%= f.input :date, as: :date %>
-    <%= f.button :submit %>
-  <% end %>
-<% end %>
 
-<% if @cow.user == current_user && @reservations != []%>
-  <% @reservations.each do |resa| %>
-    <ul>
-      <li>
-        <%= resa.date %>
-      </li>
-    </ul>
-  <% end %>
-<% end %>
+
+  </div>
+</div>
+        <% if @cow.user != current_user %>
+          <%= simple_form_for @booking,url: cow_bookings_path(@cow.id), method: :post, remote: false do |f| %>
+            <%= f.input :date, as: :date %>
+            <%= f.button :submit %>
+          <% end %>
+        <% end %>
+
+        <% if @cow.user == current_user && @reservations != []%>
+          <% @reservations.each do |resa| %>
+            <ul>
+              <li>
+                <%= resa.date %>
+              </li>
+            </ul>
+          <% end %>
+        <% end %>

@@ -1,0 +1,22 @@
+<h1>My Profile</h1>
+
+<p><%= @user.first_name %></p>
+<p><%= @user.last_name %></p>
+<p><%= @user.phone_number %></p>
+<p><%= @user.address %></p>
+
+<% @cows.each do |cow| %>
+<ul>
+<li>
+<%= cow.name %>
+</li>
+</ul>
+<% end %>
+
+<% @bookings.each do |resa| %>
+<ul>
+<li>
+<%= resa.date %>
+</li>
+</ul>
+<% end %>

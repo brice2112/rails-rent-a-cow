@@ -1,26 +1,30 @@
-<h1>                        All the Cows</h1>
+<h1>All the Cows</h1>
 
 <div class="flex-container">
 
   <% @cows.each do |cow| %>
     <div class="flex-item">
-    <div class="card-cows">
-        <% if cow.photo.key %>
-          <%= cl_image_tag(cow.photo.key, width: 120, height: 120) %>
-        <% end %>
-        <div class="flex-container">
-        <div class="card-cow-infos">
-
-          <h2><%= link_to "#{cow.name}", cow_path(cow.id) %></h2>
-          <p class="card-info-bold"><%= cow.race %></p>
-          <p class="card-info-light"><%= cow.gender %></p>
-          <% if cow.age == 1 %>
-            <p class="card-info-light"><%= cow.age %> year old</p>
-          <% else %>
-            <p class="card-info-light"><%= cow.age %> years old</p>
+      <div class="card-cows d-flex justify-content-between">
+        <div class="d-flex">
+          <% if cow.photo.key %>
+            <%= cl_image_tag(cow.photo.key, width: 120, height: 120) %>
           <% end %>
+          <div class="card-cow-infos">
+            <h2> <%= link_to "#{cow.name}", cow_path(cow.id) %></h2>
+            <p class="card-info-bold"><%= cow.race %></p>
+            <p class="card-info-light"><%= cow.gender %></p>
+            <% if cow.age == 1 %>
+              <p class="card-info-light"><%= cow.age %> year old</p>
+            <% else %>
+              <p class="card-info-light"><%= cow.age %> years old</p>
+            <% end %>
+          </div>
         </div>
+        <div class=>
+          <p class="card-price"><%= cow.price%>€</p>
+          <p class="card-rating"><%= cow.rating%>/5</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   <% end %>
+</div>
