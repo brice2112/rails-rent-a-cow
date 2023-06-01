@@ -1,15 +1,16 @@
 <h1>                        All the Cows</h1>
 
-<div class="flex-container">
-
-  <% @cows.each do |cow| %>
-    <div class="flex-item">
-    <div class="card-cows">
+<div class="container">
+    <div class="col-md-8">
+ <div class="row">
+      <% @cows.each do |cow| %>
+        <div class="flex-item">
+        <div class="card-cows">
         <% if cow.photo.key %>
           <%= cl_image_tag(cow.photo.key, width: 120, height: 120) %>
         <% end %>
         <div class="flex-container">
-        <div class="card-cow-infos">
+        <div class="card-cow-infos" class="centered">
 
           <h2><%= link_to "#{cow.name}", cow_path(cow.id) %></h2>
           <p class="card-info-bold"><%= cow.race %></p>
@@ -21,6 +22,9 @@
           <% end %>
         </div>
     </div>
+   </div>
+  <div class="col-md-4">
   </div>
-</div>
+ </div>
   <% end %>
+</div>

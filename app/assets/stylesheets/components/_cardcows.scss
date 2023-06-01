@@ -2,6 +2,7 @@
 
   overflow: hidden;
   height: 120px;
+  width: 360px;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
   display: flex;
   background-size: cover;
@@ -16,7 +17,7 @@
 
 .card-cows img {
   object-fit: cover;
-  border-radius: 8px;
+  // border-radius: 8px;
 }
 
 .card-cows h2 {
@@ -36,17 +37,20 @@
 
 .card-cows .card-cow-infos a {
   text-decoration: none;
-  color: darkslategray
+  color: darkslategray;
+  margin: 8px;
 }
 
 .card-cows .card-cow-infos .card-info-bold {
   font-size: 16px;
   font-weight: 500;
+  margin: 8px;
 }
 
 
 .card-cows .card-cow-infos .card-info-light {
   font-size: 12px;
+  margin: 8px;
 }
 
 .card-cows .card-cow-infos p h2 {
