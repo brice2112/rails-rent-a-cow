@@ -7,11 +7,11 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'open-uri'
 
-# User.destroy_all
-# Cow.destroy_all
+User.destroy_all
+Cow.destroy_all
+Booking.destroy_all
 
 ######### USERS #########
-# User.destroy_all
 
 puts "Creating users..."
 
@@ -295,3 +295,53 @@ cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/pn
 cow.save
 
 puts "seed planted!"
+
+########### BOOKINGS ############
+
+booking = Booking.new(
+  date: Date.current.tomorrow,
+  cow: Cow.find_by(name: "Ginette"),
+  user: User.find_by(email: "patrick-lecq@gmail.com")
+)
+
+booking = Booking.create!(
+  date: Date.current,
+  cow: Cow.find_by(name: "Ginette"),
+  user: User.find_by(email: "patrick-lecq@gmail.com")
+)
+
+booking = Booking.create!(
+  date: Date.current,
+  cow: Cow.find_by(name: "Badass Boxer"),
+  user: User.find_by(email: "patrick-lecq@gmail.com")
+)
+
+booking = Booking.create!(
+  date: Date.current.yesterday,
+  cow: Cow.find_by(name: "Pars à Veau l'Eau"),
+  user: User.find_by(email: "patrick-lecq@gmail.com")
+)
+
+booking = Booking.create!(
+  date: Date.current,
+  cow: Cow.find_by(name: "Pars à Veau l'Eau"),
+  user: User.find_by(email: "patrick-lecq@gmail.com")
+)
+
+booking = Booking.create!(
+  date: Date.current,
+  cow: Cow.find_by(name: "Yvonne"),
+  user: User.find_by(email: "jmtrick@gmail.com")
+)
+
+booking = Booking.create!(
+  date: Date.current,
+  cow: Cow.find_by(name: "Yvonne"),
+  user: User.find_by(email: "johnny-mcbrown@gmail.com")
+)
+
+booking = Booking.create!(
+  date: Date.current,
+  cow: Cow.find_by(name: "Yvonne"),
+  user: User.find_by(email: "johnny-mcbrown@gmail.com")
+)
