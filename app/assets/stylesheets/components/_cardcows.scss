@@ -2,6 +2,7 @@
 
   overflow: hidden;
   height: 120px;
+  width: 360px;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
   display: flex;
   background-size: cover;
@@ -50,8 +51,6 @@
 .card-cows .card-cow-infos .card-info-light {
   font-size: 12px;
   margin: 8px;
-}
-
 // .card-cows .card-cow-infos p h2 {
 //   padding: 2px;
 //   margin: 2px;
