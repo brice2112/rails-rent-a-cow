@@ -14,11 +14,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:index, :create]
   end
 
-  resources :bookings, only: [:update, :show] do
-    collection do
-      get :my_reservations
-    end
-  end
+  resources :bookings, only: [:update, :show]
 
   get '/profile', to: 'profile#show', as: 'profile'
 
