@@ -8,7 +8,6 @@ class CowsController < ApplicationController
   end
 
   def show
-    raise
     @booking = Booking.new
     @reservations = Booking.where(cow: set_cow)
   end
