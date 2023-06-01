@@ -8,9 +8,7 @@ class Cow < ApplicationRecord
   validates :age, numericality: { only_integer: true, greater_than: 0 }
   validates :gender, presence: true, inclusion: { in: %w(Male Female),
     message: "must be male or female, no LGBTQI+ allowed" }
-
-  validates :location, format: { with: /[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)/,
-    message: "wrong location format" }
+  validates :rating, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5 }
 
   validates :race, inclusion: { in: %w(
     Abondance

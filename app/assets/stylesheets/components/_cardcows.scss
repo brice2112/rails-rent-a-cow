@@ -27,7 +27,7 @@
 }
 
 .card-cows p {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1;
   opacity: .7;
   align-items: self-start;
@@ -37,7 +37,7 @@
 
 .card-cows .card-cow-infos a {
   text-decoration: none;
-  color: darkslategray;
+  color: rgb(20, 100, 74);
   margin: 8px;
 }
 
@@ -51,9 +51,24 @@
 .card-cows .card-cow-infos .card-info-light {
   font-size: 12px;
   margin: 8px;
+// .card-cows .card-cow-infos p h2 {
+//   padding: 2px;
+//   margin: 2px;
+// }
+
+.card-cows .card-price {
+  margin-top: 12px;
+  margin-right: 12px;
+  padding: 8px;
+  color: white;
+  background-color: rgb(20, 100, 74);
+  border-radius: 8px;
+  text-align: right;
 }
 
-.card-cows .card-cow-infos p h2 {
-  padding: 2px;
-  margin: 2px;
+.card-cows .card-rating {
+  font-weight: 600;
+  color: rgb(20, 100, 74);
+  text-align: right;
+  margin-right: 12px;
 }
