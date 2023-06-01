@@ -1,17 +1,14 @@
 .card-cows {
-
   overflow: hidden;
   height: 120px;
-  width: 360px;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
   display: flex;
   background-size: cover;
   background-position: center;
 }
 .flex-container {
-  display: flex;
-  justify-content: center;
-  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
 }
 
