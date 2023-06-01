@@ -35,6 +35,26 @@ class BookingsController < ApplicationController
     @bookings = current_user.bookings
   end
 
+  def approve
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    if @booking.update(validated: "accepted")
+      redirect_to profile_path, notice: "accepté"
+    else
+      redirect_to profile_path, notice: "pas accepté"
+    end
+  end
+
+  def decline
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    if @booking.update(validated: "rejected")
+      redirect_to profile_path, notice: "refusé "
+    else
+      redirect_to profile_path, notice: "pas refusé"
+    end
+  end
+
   private
 
   def set_booking

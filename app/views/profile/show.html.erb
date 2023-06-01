@@ -13,13 +13,6 @@
     <li>
      <%= cow.name %>
     </li>
-    <% cow.bookings.each do |booking| %>
-      <ul>
-        <li>
-          <%= booking.date %>
-        </li>
-      </ul>
-    <% end %>
   </ul>
 <% end %>
 
@@ -33,6 +26,7 @@
   </ul>
 <% end %>
 
+
 <h3>My Cows' Bookings</h3>
 <% @cows.each do |cow| %>
   <% cow.bookings.each do |booking| %>
@@ -40,6 +34,11 @@
       <li>
         <%= booking.date %>
         <%= booking.cow.name %>
+        <%= booking.validated %>
+        <% if booking.validated == "pending" %>
+          <%= link_to "Confirmer", approve_booking_path(booking.id), data: {turbo_method: "PATCH"}, class: "btn btn-secondary" %>
+          <%= link_to "Refuser", decline_booking_path(booking.id), data: {turbo_method: "PATCH"}, class: "btn btn-secondary" %>
+        <% end %>
       </li>
     </ul>
   <% end %>
