@@ -6,41 +6,20 @@
 <p><%= @user.phone_number %></p>
 <p><%= @user.address %></p>
 
-
-<h3>My Cows</h3>
-<% @cows.each do |cow| %>
-  <ul>
-    <li>
-     <%= cow.name %>
+<div class="container-fluid">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><%= link_to "My cows", request.params.merge(tab: "my_cows") %></button>
     </li>
-    <% cow.bookings.each do |booking| %>
-      <ul>
-        <li>
-          <%= booking.date %>
-        </li>
-      </ul>
-    <% end %>
-  </ul>
-<% end %>
-
-
-<h3>My Reservations</h3>
-<% @bookings.each do |resa| %>
-  <ul>
-    <li>
-      <%= resa.date %>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><%= link_to "My bookings", request.params.merge(tab: "my_bookings") %></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><%= link_to "My booking requests", request.params.merge(tab: "my_booking_requests") %></button>
     </li>
   </ul>
-<% end %>
 
-<h3>My Cows' Bookings</h3>
-<% @cows.each do |cow| %>
-  <% cow.bookings.each do |booking| %>
-    <ul>
-      <li>
-        <%= booking.date %>
-        <%= booking.cow.name %>
-      </li>
-    </ul>
+  <% if params[:tab].present? %>
+    <%= render "shared/#{params[:tab]}" %>
   <% end %>
-<% end %>
+</div>

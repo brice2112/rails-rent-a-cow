@@ -1,0 +1,15 @@
+<h3>My Cows</h3>
+<% @cows.each do |cow| %>
+  <ul>
+    <li>
+     <%= cow.name %>
+    </li>
+    <% cow.bookings.each do |booking| %>
+      <ul>
+        <li>
+          <%= booking.date %>
+        </li>
+      </ul>
+    <% end %>
+  </ul>
+<% end %>
