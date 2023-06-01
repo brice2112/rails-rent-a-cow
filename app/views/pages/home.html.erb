@@ -8,8 +8,10 @@
         <div class="carousel-inner">
           <% @cows.each do |cow| %>
             <div class="<%= cow == @cows.first ? "carousel-item active" : "carousel-item" %>">
+            <% if cow.photo.key %>
               <%= cl_image_tag cow.photo.key, class: "d-block w-100" %>
-              <%= link_to "#{cow.name}", cow_path(cow.id) %>
+            <% end %>
+            <%= link_to "#{cow.name}", cow_path(cow.id) %>
             </div>
           <% end %>
         </div>
