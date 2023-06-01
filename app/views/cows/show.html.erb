@@ -19,7 +19,7 @@
   <% end %>
 <% end %>
 
-<% if @cow.user == current_user && @reservations != []%>
+<% if @cow.user == current_user && @reservations.any? %>
   <% @reservations.each do |resa| %>
     <ul>
       <li>
