@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
     @cow = Cow.find(params[:cow_id])
     @booking.cow_id = @cow.id
     @booking.user_id = current_user.id
+    authorize @booking
     if @booking.save!
       flash[:notice] = "Done!"
       redirect_to cow_path(@cow.id)
@@ -15,18 +16,22 @@ class BookingsController < ApplicationController
   end
 
   def show
+    authorize @booking
   end
 
   def update
+    authorize @booking
     @booking.update(booking_params)
     redirect_to booking_path(@booking)
   end
 
   def delete
+    authorize @booking
     @booking.destroy
   end
 
   def my_reservations
+    authorize @booking
     @bookings = current_user.bookings
   end
 

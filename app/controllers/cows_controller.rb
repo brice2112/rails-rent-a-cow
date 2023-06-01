@@ -3,30 +3,33 @@ class CowsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @cows = Cow.all
-
+    @cows = policy_scope(Cow)
   end
 
   def show
     @booking = Booking.new
-    @reservations = Booking.where(cow: set_cow)
+    @reservations = Booking.where(cow: @cow)
+    authorize @cow
   end
 
   def new
     @cow = Cow.new
+    authorize @cow
   end
 
   def create
     @cow = Cow.new(cow_params)
     @cow.user = current_user
+    authorize @cow
     if @cow.save!
       redirect_to cow_path(@cow.id)
     else
-      render new, status: 422   #Don't have any error message in the browser ?
+      render new, status: 422                   #Don't have any error message in the browser ?
     end
   end
 
   def destroy
+    authorize @cow
     @cow.destroy
     redirect_to cows_path
   end
