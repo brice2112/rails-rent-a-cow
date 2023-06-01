@@ -18,5 +18,13 @@ class BookingPolicy < ApplicationPolicy
     true
   end
 
+  def approve?
+    record.cow.user == user
+  end
+
+  def decline?
+    record.cow.user == user
+  end
+
 
 end
