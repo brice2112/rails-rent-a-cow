@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
 
+  patch "bookings/:id/approve",to: "bookings#approve", as: "approve_booking"
+  patch "bookings/:id/decline",to: "bookings#decline", as: "decline_booking"
+
+
   resources :cows, only: [:index, :show, :new, :create, :destroy] do
     collection do
       get :my_cows

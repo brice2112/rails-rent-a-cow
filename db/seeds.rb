@@ -294,4 +294,20 @@ file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/R
 cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
 cow.save
 
+#### Bookings
+
+puts "creating bookings"
+
+Booking.create!(
+  date: DateTime.new(2023,7,1,1,1,1),
+  cow: Cow.first,
+  user: User.find_by(email: "patrick-lecq@gmail.com")
+)
+
+Booking.create!(
+  date: DateTime.new(2023,9,10,1,1,1),
+  cow: Cow.find_by(name: "Marguerite"),
+  user: User.first
+)
+
 puts "seed planted!"
