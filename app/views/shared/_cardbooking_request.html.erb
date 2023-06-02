@@ -1,0 +1,23 @@
+    <div class="flex-item">
+      <div class="card-cows d-flex justify-content-between">
+        <div class="card-cow-infos d-flex">
+          <% if resa.cow.photo.key %>
+            <%= cl_image_tag(resa.cow.photo.key, width: 120, height: 120) %>
+          <% end %>
+          <div>
+            <h2 class="mx-3"><%= resa.cow.name %></h2>
+            <p class="card-info-bold mx-3">Booking requested on: <%= resa.date %> by <%= resa.user.first_name %> <%= resa.user.last_name %></p>
+            <% if resa.validated == "pending" %>
+              <p class="btn btn-outline-warning mx-3"><%= resa.validated %></p>
+            <% elsif resa.validated == "accepted" %>
+              <p class="btn btn-outline-success mx-3"><%= resa.validated %></p>
+            <% elsif resa.validated == "rejected" %>
+              <p class="btn btn-outline-danger mx-3"><%= resa.validated %></p>
+            <% end %>
+          </div>
+      </div>
+      <div>
+        <%= link_to "Accept", approve_booking_path(resa.id), data: {turbo_method: "PATCH"}, class: "btn btn-success text-decoration-none m-3" %>
+        <%= link_to "Reject", decline_booking_path(resa.id), data: {turbo_method: "PATCH"}, class: "btn btn-warning text-decoration-none m-3" %>
+      </div>
+    </div>
