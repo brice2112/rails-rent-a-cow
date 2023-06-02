@@ -230,7 +230,7 @@ cow = Cow.new(
   price: 35,
   rating: 3.3,
   description: "charmante mais n'aime pas les haut-savoyards",
-  address: "20 rue des capucins, 69001 lyon", ",
+  address: "20 rue des capucins, 69001 lyon",
   user: User.find_by(email: "lagribgdu56@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454867/Rent%20A%20Cow/cow7_t0wp9y.jpg')
