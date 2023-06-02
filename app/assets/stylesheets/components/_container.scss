@@ -1,10 +1,17 @@
 .container {
   display: flex;
-  margin-left: 0;
+  justify-content: center;
   width: 33.33%;
 }
 
 .flex-item {
   flex: 0 0 33.33%;
   padding: 10px;
+}
+
+.container h3 {
+color: black;
+font-size: 30px;
+font-weight: bold;
+font-style: "Work Sans", "Helvetica", "sans-serif";
 }
