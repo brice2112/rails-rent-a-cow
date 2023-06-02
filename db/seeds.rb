@@ -140,6 +140,7 @@ cow = Cow.new(
   price: 5,
   rating: 4.9,
   description: "petit veau limousin très placide, demande beaucoup d'affection.",
+  address: "Champ de Mars, 5 Av. Anatole France, 75007 Paris",
   user: User.find_by(email: "jmtrick@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow10_dmn3lv.jpg')
@@ -155,6 +156,7 @@ cow = Cow.new(
   price: 185,
   rating: 5,
   description: "High-end premium cow, only for rich people",
+  address: "Place d'Armes, 78000 Versailles",
   user: User.last
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow12_rxhnbh.jpg')
@@ -170,6 +172,7 @@ cow = Cow.new(
   price: 55,
   rating: 4.2,
   description: "looks cool but is terrific",
+  address: "5 rue capitaine de dietrich, 67000 Strasbourg",
   user: User.last
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow14_bfc3dl.jpg')
@@ -185,6 +188,7 @@ cow = Cow.new(
   price: 75,
   rating: 4.6,
   description: "Nice and lovely cow, full of tenderness",
+  address: "12 rue de la paix, 75000 Paris",
   user: User.last
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454867/Rent%20A%20Cow/cow9_nlroql.jpg')
@@ -200,6 +204,7 @@ cow = Cow.new(
   price: 52,
   rating: 5,
   description: "Nice and lovely bull, full of tenderness, you'll fall in love instantly.",
+  address: "parc de la tete d'or, 69000 Lyon",
   user: User.last
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454867/Rent%20A%20Cow/cow8_tmhh8n.jpg')
@@ -214,7 +219,8 @@ cow = Cow.new(
   location: "44.1231, -1.9299",
   price: 15,
   rating: 3.6,
-  description: "",
+  description: "Produit un lait de haute volée mais n'aime pas les hommes.",
+  address: "place bellecour, 69000 Lyon",
   user: User.find_by(email: "marcel-boursier@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow23_al8hbw.jpg')
@@ -245,7 +251,7 @@ cow = Cow.new(
   location: "1.1231, -65.99999",
   price: 5,
   rating: 2.2,
-  description: "",
+  description: "tres rigolo mais n'aime pas les haut-savoyards",
   address: "1 rue de la vache, 75001 Paris",
   user: User.find_by(email: "momoguiguich@gmail.com")
 )
@@ -262,6 +268,7 @@ cow = Cow.new(
   price: 105,
   rating: 4.7,
   description: "Rare and precious",
+  address: "parc de meribel jonas, 73550 Meribel",
   user: User.last
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454867/Rent%20A%20Cow/cow6_mutbm6.jpg')
@@ -276,7 +283,8 @@ cow = Cow.new(
   location: "57.1231, 11.94599",
   price: 35,
   rating: 4.4,
-  description: "sent bon",
+  description: "sent bon le parfum et la tendresse de la campagne française",
+  address: "place vendome, 75001 Paris",
   user: User.find_by(email: "momoguiguich@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow15_cq7rjt.jpg')
@@ -291,7 +299,8 @@ cow = Cow.new(
   location: "24.1231, -8.94599",
   price: 23,
   rating: 4.1,
-  description: "vache",
+  description: "vache de combat qui code en javascript",
+  address: "amsterdam, 1012 JS Amsterdam, Pays-Bas",
   user: User.find_by(email: "momoguiguich@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow19_jkfgvg.jpg')

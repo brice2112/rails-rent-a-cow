@@ -46,6 +46,7 @@ class CowsController < ApplicationController
 
   def set_cow
     @cow = Cow.find(params[:id])
+    authorize @cow
   end
 
   def cow_params
