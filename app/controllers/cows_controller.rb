@@ -8,8 +8,8 @@ class CowsController < ApplicationController
       {
         lat: cow.latitude,
         lng: cow.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: {cow: cow}),
-        marker_html: render_to_string(partial: "marker", locals: {cow: cow})
+        info_window: render_to_string(partial: "cows/info_window", locals: {cow: cow}),
+        marker_html: render_to_string(partial: "cows/marker", locals: {cow: cow})
       }
     end
   end
