@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <%= simple_form_for @cow do |f| %>
-      <%= f.input :name %>
+      <%= f.input :name, error: f.full_error(:name) %>
       <%= f.input :race, collection:
         [['0', "Abondance"],
         ['1', "Bordelaise"],
@@ -30,7 +30,8 @@
        label_method: :second, value_method: :second%>
       <%= f.input :gender, collection: [['0', "Male"], ['1', "Female"]], label_method: :second, value_method: :second %>
       <%= f.input :age, as: :integer %>
-      <%= f.input :location %>
+      <%= f.input :price, as: :integer %>
+      <%# <%= f.input :location %>
       <%= f.input :photo, as: :file %>
       <%= f.button :submit %>
       <%= f.input :address, input_html: {data: {"..."}, class: "d-none"}

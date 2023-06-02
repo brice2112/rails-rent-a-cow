@@ -28,8 +28,10 @@ class CowsController < ApplicationController
     @cow.user = current_user
     if @cow.save!
       redirect_to cow_path(@cow.id)
+      flash.notice = "Cow succesfully created!"
     else
-      render new, status: 422   #Don't have any error message in the browser ?
+      flash.alert = "Error in creating cow..."
+      render :new, status: :unprocessable_entity                #Don't have any error message in the browser ?
     end
   end
 
@@ -49,6 +51,6 @@ class CowsController < ApplicationController
   end
 
   def cow_params
-    params.require(:cow).permit(:name, :race, :gender, :age, :location, :photo)
+    params.require(:cow).permit(:name, :race, :gender, :age, :location, :photo, :price)
   end
 end
