@@ -314,6 +314,8 @@ puts "seed planted!"
 
 ########### BOOKINGS ############
 
+puts "Creating bookings..."
+
 booking = Booking.new(
   date: Date.current.tomorrow,
   cow: Cow.find_by(name: "Ginette"),
