@@ -2,15 +2,9 @@
 
 <div class="container-fluid">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><%= link_to "My cows", request.params.merge(tab: "my_cows") %></button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><%= link_to "My bookings", request.params.merge(tab: "my_bookings") %></button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><%= link_to "My booking requests", request.params.merge(tab: "my_booking_requests") %></button>
-    </li>
+      <button class="btn m-3" ><%= link_to "My cows", request.params.merge(tab: "my_cows"), class: "tab-button" %></button>
+      <button class="btn m-3" ><%= link_to "My bookings", request.params.merge(tab: "my_bookings"), class: "tab-button" %></button>
+      <button class="btn m-3" ><%= link_to "My booking requests", request.params.merge(tab: "my_booking_requests"), class: "tab-button" %></button>
   </ul>
 
   <% if params[:tab].present? %>

@@ -88,11 +88,10 @@ cow = Cow.new(
   age: 4,
   race: "Charolaise",
   gender: "Female",
-  location: "47.1231231, 179.99999999",
   price: 15,
   rating: 5,
   description: "Nice and lovely cow, full of tenderness",
-  address: "3 rue du moulin, 256123 Losse-en-Gelaisse",
+  address: "8 place Napoléon 02000 Laon",
   user: User.first
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow17_h9q13t.jpg')
@@ -104,11 +103,10 @@ cow = Cow.new(
   age: 2,
   race: "Bordelaise",
   gender: "Female",
-  location: "44.12331, 2.9999",
   price: 23,
   rating: 4.7,
   description: "Gentille mais farouche, à dompter",
-  address: "5 rue du moulin, 256123 Losse-en-Gelaisse",
+  address: "50 rue Frederic Chopin 03200 Vichy",
   user: User.find_by(email: "patrick-lecq@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow18_oeqyz6.jpg')
@@ -120,11 +118,10 @@ cow = Cow.new(
   age: 7,
   race: "Prim'Holstein",
   gender: "Female",
-  location: "42.1231, 42.99999",
   price: 12,
   rating: 3.9,
   description: "attention, n'aime pas les roux.",
-  address: "55 rue du Faubourg-Saint-Honoré 75008 Paris",
+  address: "78 rue Sebastopol 42000 Saint-etienne",
   user: User.find_by(email: "jmtrick@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow20_tc3kxe.jpg')
@@ -136,10 +133,10 @@ cow = Cow.new(
   age: 1,
   race: "Limousine",
   gender: "Female",
-  location: "54.31231, -5.9999459",
   price: 5,
   rating: 4.9,
   description: "petit veau limousin très placide, demande beaucoup d'affection.",
+  address: "83 rue Sadi Carnot 15000 Aurillac",
   user: User.find_by(email: "jmtrick@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow10_dmn3lv.jpg')
@@ -151,10 +148,10 @@ cow = Cow.new(
   age: 3,
   race: "Ferrandaise",
   gender: "Female",
-  location: "45.1231, -5.99999",
   price: 185,
   rating: 5,
   description: "High-end premium cow, only for rich people",
+  address: "90 rue de Lille 92600 Asnières-sur-seine",
   user: User.last
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow12_rxhnbh.jpg')
@@ -166,10 +163,10 @@ cow = Cow.new(
   age: 5,
   race: "Aubrac",
   gender: "Male",
-  location: "23.1231, 1.945899",
   price: 55,
   rating: 4.2,
   description: "looks cool but is terrific",
+  address: "9 cours Franklin Roosevelt 13007 Marseille",
   user: User.last
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow14_bfc3dl.jpg')
@@ -181,7 +178,6 @@ cow = Cow.new(
   age: 4,
   race: "Armoricaine",
   gender: "Male",
-  location: "47.1231231, 179.99999999",
   price: 75,
   rating: 4.6,
   description: "Nice and lovely cow, full of tenderness",
@@ -196,7 +192,6 @@ cow = Cow.new(
   age: 8,
   race: "Charolaise",
   gender: "Male",
-  location: "12.1231, -65.99999",
   price: 52,
   rating: 5,
   description: "Nice and lovely bull, full of tenderness, you'll fall in love instantly.",
@@ -211,7 +206,6 @@ cow = Cow.new(
   age: 8,
   race: "Prim'Holstein",
   gender: "Female",
-  location: "44.1231, -1.9299",
   price: 15,
   rating: 3.6,
   description: "",
@@ -226,7 +220,6 @@ cow = Cow.new(
   age: 2,
   race: "Tarine",
   gender: "Female",
-  location: "1.1231, -65.99999",
   price: 35,
   rating: 3.3,
   description: "charmante mais n'aime pas les haut-savoyards",
@@ -242,7 +235,6 @@ cow = Cow.new(
   age: 1,
   race: "Limousine",
   gender: "Male",
-  location: "1.1231, -65.99999",
   price: 5,
   rating: 2.2,
   description: "",
@@ -258,7 +250,6 @@ cow = Cow.new(
   age: 5,
   race: "Limousine",
   gender: "Female",
-  location: "45.1231, -5.94599",
   price: 105,
   rating: 4.7,
   description: "Rare and precious",
@@ -273,7 +264,6 @@ cow = Cow.new(
   age: 5,
   race: "Parthenaise",
   gender: "Female",
-  location: "57.1231, 11.94599",
   price: 35,
   rating: 4.4,
   description: "sent bon",
@@ -288,7 +278,6 @@ cow = Cow.new(
   age: 2,
   race: "Salers",
   gender: "Male",
-  location: "24.1231, -8.94599",
   price: 23,
   rating: 4.1,
   description: "vache",
@@ -303,7 +292,7 @@ cow = Cow.new(
   age: 3,
   race: "Limousine",
   gender: "Female",
-  location: "24.1231, -8.94599",
+  address: "20 rue des capucins 69001 Lyon",
   price: 42,
   rating: 5,
   description: "très sympathique mais meugle beaucoup",
