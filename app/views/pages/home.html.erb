@@ -1,27 +1,25 @@
-<%=render "shared/banner"%>
+<%= render "shared/banner" %>
 
 <div class="container mt-3 text-align-center">
   <div class="row justify-content-center">
     <div class="col-12">
 
-      <h3> The week's cow </h3>
-      <a  href="\cows" class= "myButton">Find your cow</a>
+      <h3>The week's cow</h3>
+      <a href="/cows" class="myButton">Find your cow</a>
 
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <% @cows.each do |cow| %>
-            <div class="<%= cow == @cows.first ? "carousel-item active" : "carousel-item" %>">
-            <% if cow.photo.key %>
-              <%= cl_image_tag cow.photo.key, class: "d-block w-100" %>
-            <% end %>
-            <%= link_to "#{cow.name}", cow_path(cow.id) %>
+            <div class="<%= cow == @cows.first ? 'carousel-item active' : 'carousel-item' %>">
+              <% if cow.photo.key %>
+                <%= cl_image_tag cow.photo.key, class: 'd-block w-100' %>
+              <% end %>
+              <%= link_to cow.name, cow_path(cow.id) %>
             </div>
           <% end %>
-
         </div>
       </div>
 
     </div>
   </div>
 </div>
-<%# <div class="footer">
