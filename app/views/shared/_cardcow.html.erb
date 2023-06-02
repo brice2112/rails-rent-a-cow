@@ -1,10 +1,27 @@
-  <div class="flex-container">
-    <div class="card-cow">
-    <div class="col-3"></div>
-  <%= image_tag "popcorn.png" %>
-    <div class="card-cow-infos">
-    <h2>Vache name</h2>
-    <p>Tres belle vache <strong>relevant info</strong> only.</p>
-  </div>
- </div>
-</div>
+    <div class="flex-item">
+      <div class="card-cows d-flex justify-content-between">
+        <div class="d-flex">
+          <% if cow.photo.key %>
+            <%= cl_image_tag(cow.photo.key, width: 120, height: 120) %>
+          <% end %>
+          <div class="card-cow-infos">
+            <h2> <%= link_to "#{cow.name}", cow_path(cow.id) %></h2>
+            <p class="card-info-bold"><%= cow.race %></p>
+            <p class="card-info-light"><%= cow.gender %></p>
+            <% if cow.age == 1 %>
+              <p class="card-info-light"><%= cow.age %> year old</p>
+            <% else %>
+              <p class="card-info-light"><%= cow.age %> years old</p>
+            <% end %>
+          </div>
+        </div>
+        <div class="card-cow-infos">
+          <p class="card-price"><%= cow.price%>€</p>
+          <% if !cow.rating %>
+            <p class="card-info-light">Not rated yet</p>
+          <% else %>
+            <p class="card-rating"><%= cow.rating%>/5</p>
+          <% end %>
+        </div>
+      </div>
+    </div>

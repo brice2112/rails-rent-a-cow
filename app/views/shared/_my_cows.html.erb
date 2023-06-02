@@ -1,17 +1,8 @@
-<h3>My Cows</h3>
 <% @cows.each do |cow| %>
-  <ul>
-    <li>
-     <%= cow.name %>
-    </li>
+    <%= render partial: "shared/cardcow", locals: { cow: cow }  %>
     <% cow.bookings.each do |booking| %>
-      <ul>
-        <li>
-          <%= booking.date %>
-        </li>
-      </ul>
+      <p class="fw-bold"><%= booking.date %></p>
     <% end %>
-  </ul>
 <% end %>
 
 <button><%= link_to "Add a cow", new_cow_path %></button>
