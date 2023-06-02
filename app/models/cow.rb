@@ -4,6 +4,10 @@ class Cow < ApplicationRecord
   has_many :users, through: :bookings
   has_one_attached :photo
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
+
   validates :name, presence: true
   validates :age, numericality: { only_integer: true, greater_than: 0 }
   validates :gender, presence: true, inclusion: { in: %w(Male Female),

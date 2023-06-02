@@ -16,7 +16,6 @@ Booking.destroy_all
 puts "Creating users..."
 
 
-
 User.create!(
   first_name: "Jean François",
   last_name: "Couillard",
@@ -93,6 +92,7 @@ cow = Cow.new(
   price: 15,
   rating: 5,
   description: "Nice and lovely cow, full of tenderness",
+  address: "3 rue du moulin, 256123 Losse-en-Gelaisse",
   user: User.first
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow17_h9q13t.jpg')
@@ -108,6 +108,7 @@ cow = Cow.new(
   price: 23,
   rating: 4.7,
   description: "Gentille mais farouche, à dompter",
+  address: "5 rue du moulin, 256123 Losse-en-Gelaisse",
   user: User.find_by(email: "patrick-lecq@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow18_oeqyz6.jpg')
@@ -123,6 +124,7 @@ cow = Cow.new(
   price: 12,
   rating: 3.9,
   description: "attention, n'aime pas les roux.",
+  address: "55 rue du Faubourg-Saint-Honoré 75008 Paris",
   user: User.find_by(email: "jmtrick@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow20_tc3kxe.jpg')
@@ -228,6 +230,7 @@ cow = Cow.new(
   price: 35,
   rating: 3.3,
   description: "charmante mais n'aime pas les haut-savoyards",
+  address: "20 rue des capucins, 69001 lyon", ",
   user: User.find_by(email: "lagribgdu56@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454867/Rent%20A%20Cow/cow7_t0wp9y.jpg')
@@ -243,6 +246,7 @@ cow = Cow.new(
   price: 5,
   rating: 2.2,
   description: "",
+  address: "1 rue de la vache, 75001 Paris",
   user: User.find_by(email: "momoguiguich@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow21_bm0fyu.jpg')
