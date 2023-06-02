@@ -1,46 +1,71 @@
-.card-trip {
+.card-cows {
   overflow: hidden;
-  background: rgb(14, 104, 68);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 120px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  display: flex;
+  background-size: cover;
+  background-position: center;
+}
+.flex-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
 }
 
-.card-trip > img {
-  height: 600px;
-  width: 100%;
-  padding-left: 200px;
-  padding-right: 200px;
+.card-cows img {
   object-fit: cover;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
+  // border-radius: 8px;
 }
 
-.card-trip h2 {
-  font-size: 48px;
-  font-family: 'Acme';
+.card-cows h2 {
+  color: black;
+  font-size: 24px;
   font-weight: bold;
-  color : white;
-  margin-top: 20px;
-  align-items: center;
-  justify-content: center;
 }
 
-.card-trip p {
-  font-size: 18px;
-  color : white;
+.card-cows p {
+  font-size: 24px;
+  line-height: 1;
+  opacity: .7;
+  align-items: self-start;
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+
+.card-cows .card-cow-infos a {
+  text-decoration: none;
+  color: rgb(20, 100, 74);
+  margin: 8px;
+}
+
+.card-cows .card-cow-infos .card-info-bold {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 8px;
 }
 
 
-.card-trip .card-trip-infos {
-  padding: 16px;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+.card-cows .card-cow-infos .card-info-light {
+  font-size: 12px;
+  margin: 8px;
+// .card-cows .card-cow-infos p h2 {
+//   padding: 2px;
+//   margin: 2px;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.card-cows .card-price {
+  margin-top: 12px;
+  margin-right: 12px;
+  padding: 8px;
+  color: white;
+  background-color: rgb(20, 100, 74);
+  border-radius: 8px;
+  text-align: right;
+}
+
+.card-cows .card-rating {
+  font-weight: 600;
+  color: rgb(20, 100, 74);
+  text-align: right;
+  margin-right: 12px
 }
