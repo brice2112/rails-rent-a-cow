@@ -3,16 +3,15 @@
       <h1 class="centered"><%= @cow.name%></h1>
         <% if @cow.photo.attached? %>
           <%= cl_image_tag(@cow.photo.key, width: 800, height: 600, crop: :fill) %>
-        <p class="centered">Propriétaire : <%= @cow.user.first_name %> <%= @cow.user.last_name %></p>
+        <p class="centered"><strong>Owner</strong>: <%= @cow.user.first_name %> <%= @cow.user.last_name %></p>
         <% end %>
-
-        <p class="centered">Race</p>
+        <p class="centered"><strong>Race</strong></p>
         <p class="centered"><%= @cow.race %></p>
-        <p class="centered">Gender</p>
+        <p class="centered"><strong>Gender</strong></p>
         <p class="centered"><%= @cow.gender %></p>
-        <p class="centered">Age</p>
+        <p class="centered"><strong>Age</strong></p>
         <p class="centered"><%= @cow.age %></p>
-        <p class="centered">Propriétaire</p>
+        <p><%= @cow.description %></p>
 
 
 
