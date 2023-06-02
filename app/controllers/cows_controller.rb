@@ -21,6 +21,7 @@ class CowsController < ApplicationController
 
   def new
     @cow = Cow.new
+    authorize @cow
   end
 
   def create
