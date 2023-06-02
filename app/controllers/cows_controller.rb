@@ -21,6 +21,7 @@ class CowsController < ApplicationController
 
   def new
     @cow = Cow.new
+    authorize @cow
   end
 
   def create
@@ -52,6 +53,6 @@ class CowsController < ApplicationController
   end
 
   def cow_params
-    params.require(:cow).permit(:name, :race, :gender, :age, :location, :photo, :price)
+    params.require(:cow).permit(:name, :race, :gender, :age, :location, :photo, :price, :adress)
   end
 end

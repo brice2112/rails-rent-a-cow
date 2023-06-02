@@ -1,0 +1,10 @@
+    <div class="flex-item">
+      <div class="card-resas d-flex justify-content-between">
+        <div class="d-flex">
+          <% if resa.cow.photo.key %>
+            <%= cl_image_tag(resa.cow.photo.key, width: 120, height: 120) %>
+          <% end %>
+          <%= resa.date %>
+        </div>
+      </div>
+    </div>

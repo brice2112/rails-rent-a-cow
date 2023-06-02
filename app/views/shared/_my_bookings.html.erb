@@ -1,8 +1,5 @@
 <h3>My Reservations</h3>
 <% @bookings.each do |resa| %>
-  <ul>
-    <li>
-      <%= resa.date %>
-    </li>
-  </ul>
+      <%= render partial: "shared/cardbooking", locals: { resa: resa }  %>
 <% end %>
+

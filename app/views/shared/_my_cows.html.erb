@@ -1,8 +1,5 @@
 <% @cows.each do |cow| %>
     <%= render partial: "shared/cardcow", locals: { cow: cow }  %>
-    <% cow.bookings.each do |booking| %>
-      <p class="fw-bold"><%= booking.date %></p>
-    <% end %>
 <% end %>
 
-<button><%= link_to "Add a cow", new_cow_path %></button>
+<button class="btn m-3 p-6"><%= link_to "+", new_cow_path, class: "add-button" %></button>
