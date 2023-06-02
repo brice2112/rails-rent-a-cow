@@ -7,29 +7,25 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-        <p class="navbar-title">Rent A Cow</p>
+        <p class="navbar-title" >Rent A Cow</p>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <%# <% if user_signed_in? %>
           <li class="nav-item dropdown">
-
-
-
-
-
           </li>
         <%# else %>
           <!--li class="nav-item"-->
 
            <% if current_user %>
 
-            <%= link_to image_tag('photo_banner.jpg', class:'avatar'), user_registration_path %>
+            <%= link_to image_tag('photo_banner.jpg', class:'avatar'), profile_path %>
               <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             Home
              </button>
              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My profil", profile_path, class: "dropdown-item" %>
               <%= link_to "Rent a cow", cows_path, class: "dropdown-item" %>
+              <%=link_to "See all cows", cows_path, class: "dropdown-item"%>
               <%=link_to "Log Out", destroy_user_session_path, class: "dropdown-item"%>
             </div>
           <%else%>
