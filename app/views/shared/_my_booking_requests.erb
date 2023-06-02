@@ -1,6 +1,6 @@
-<% @cows.each do |cow| %>
-  <% cow.bookings.each do |booking| %>
-          <%= render partial: "shared/cardbooking_request", locals: { resa: booking }  %>
 
-  <% end %>
-<% end %>
+    <% @cows.each do |cow| %>
+      <% cow.bookings.each do |booking| %>
+        <%= render partial: "shared/cardbooking_request", locals: { resa: booking }  %>
+      <% end %>
+    <% end %>

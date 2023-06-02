@@ -26,6 +26,7 @@ class CowsController < ApplicationController
 
   def create
     @cow = Cow.new(cow_params)
+    authorize @cow
     @cow.user = current_user
     if @cow.save!
       redirect_to cow_path(@cow.id)

@@ -1,6 +1,6 @@
-    <div class="flex-item">
-      <div class="card-cows d-flex justify-content-between">
-        <div class="card-cow-infos d-flex">
+  <div class="flex-item">
+    <div class="card-cows d-flex justify-content-between">
+      <div class="card-cow-infos d-flex">
           <% if resa.cow.photo.key %>
             <%= cl_image_tag(resa.cow.photo.key, width: 120, height: 120) %>
           <% end %>
@@ -9,7 +9,6 @@
             <p class="card-info-light mx-3">Owner: <%= resa.cow.user.first_name %> <%= resa.cow.user.last_name %></p>
             <p class="card-info-bold mx-3">Booking requested on: <%= resa.date %></p>
           </div>
-      </div>
             <% if resa.validated == "pending" %>
               <p class="p-3 text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-3 m-4"><%= resa.validated %></p>
             <% elsif resa.validated == "accepted" %>
@@ -17,4 +16,6 @@
             <% elsif resa.validated == "rejected" %>
               <p class="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3 m-4"><%= resa.validated %></p>
             <% end %>
+      </div>
     </div>
+  </div>
