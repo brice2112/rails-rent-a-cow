@@ -252,7 +252,7 @@ cow.save
 cow = Cow.new(
   name: "Ginger Beauty",
   age: 5,
-  race: "Rouge flamande",
+  race: "Limousine",
   gender: "Female",
   location: "45.1231, -5.94599",
   price: 105,
@@ -291,6 +291,21 @@ cow = Cow.new(
   user: User.find_by(email: "momoguiguich@gmail.com")
 )
 file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685454868/Rent%20A%20Cow/cow19_jkfgvg.jpg')
+cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
+cow.save
+
+cow = Cow.new(
+  name: "Pawline la limousine",
+  age: 3,
+  race: "Limousine",
+  gender: "Female",
+  location: "24.1231, -8.94599",
+  price: 42,
+  rating: 5,
+  description: "très sympathique mais meugle beaucoup",
+  user: User.find_by(email: "momoguiguich@gmail.com")
+)
+file = URI.open('https://res.cloudinary.com/dw25hg2ws/image/upload/v1685698954/Rent%20A%20Cow/vache-limousin_pw1umi.jpg')
 cow.photo.attach(io: file, filename: "cow17_h9q13t.jpg", content_type: "image/png")
 cow.save
 

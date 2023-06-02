@@ -20,9 +20,13 @@
             <% end %>
           </div>
         </div>
-        <div class=>
+        <div class="card-cow-infos">
           <p class="card-price"><%= cow.price%>€</p>
-          <p class="card-rating"><%= cow.rating%>/5</p>
+          <% if !cow.rating %>
+            <p class="card-info-light">Not rated yet</p>
+          <% else %>
+            <p class="card-rating"><%= cow.rating%>/5</p>
+          <% end %>
         </div>
       </div>
     </div>
